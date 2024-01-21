@@ -1,0 +1,530 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<style>
+@import url('https://fonts.cdnfonts.com/css/sf-pro-display?styles=98774,98777,98776,98772,98773,98775,98770,98771,98769');
+#hero{
+    width: 100%;
+    height: 400px;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    font-family: 'SF Pro Display', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: clip;
+}
+#hero .title{
+    font-size: 34pt;
+    font-weight: 500;
+}
+#hero .visual-container{
+    position: relative;
+    max-width: 40vw;
+    max-height: 400px;
+    margin-right: 5vw;
+}
+#hero .visual-container img{
+    margin-top: 140px;
+}
+#hero .ftc, .stc, .ttc {
+    position: absolute;
+}
+
+#hero .ftc .er{
+position: absolute;
+width: 200px;
+height: 19px;
+top: 260;
+left: -104;
+font-family: 'SF Pro Display';
+font-style: normal;
+font-weight: 600;
+font-size: 17px;
+line-height: 19px;
+background: linear-gradient(268.09deg, #3927FF -0.76%, #5808E1 46.66%, #F10404 92.77%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+color: transparent;
+}
+
+#hero .stc .pc{
+position: absolute;
+width: 200px;
+top: 4;
+left: 92;
+top: 97px;
+font-family: 'SF Pro Display';
+font-style: normal;
+font-weight: 600;
+font-size: 17px;
+line-height: 19px;
+background: linear-gradient(268.09deg, #3927FF -0.76%, #5808E1 46.66%, #F10404 92.77%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+color: transparent;
+}
+
+
+#hero .ttc .ce{
+position: absolute;
+width: 200px;
+height: 19px;
+top: 172;
+left: 316;
+font-family: 'SF Pro Display';
+font-style: normal;
+font-weight: 600;
+font-size: 17px;
+line-height: 19px;
+background: linear-gradient(268.09deg, #3927FF -0.76%, #5808E1 46.66%, #F10404 92.77%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+color: transparent;
+}
+
+
+#hero .ftc img {
+    position: absolute;
+    top: 172;
+    left: 0;
+}
+
+#hero .stc img {
+    position: absolute;
+    top: 6;
+    left: 172;
+}
+
+#hero .ttc img {
+    position: absolute;
+    top: 80;
+    left: 328;
+}
+
+/* Responsive MQ */
+@media screen and (max-width: 904px) {
+    #hero{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 6vh;
+}
+#hero .title{
+    font-size: 28pt;
+}
+#hero .visual-container{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 104vw;
+    max-height: 48vh;
+    overflow: clip;
+    padding: 0 4px;
+}
+#hero .visual-container img{
+    margin-top: 240px;
+    max-width: 88vw;
+    max-height: 60vh;
+}
+#hero .ftc .er {
+    width: 128px;
+    height: auto;
+    text-align: center;
+    font-size: 14px;
+    top: -56;
+    left: -168;
+}
+
+#hero .stc .pc {
+    width: 128px;
+    height: auto;
+    text-align: center;
+    font-size: 14px;
+    top: -136;
+    left: -48;
+}
+
+#hero .ttc .ce {
+    width: 124px;
+    height: auto;
+    text-align: center;
+    font-size: 14px;
+    top: -90;
+    left: 32;
+}
+
+#hero .union{
+    max-height: 48px;
+}
+#hero .ftc img {
+    top: -206;
+    left: -152;
+    transform: rotate(50deg);
+}
+
+#hero .stc img {
+    top: -336;
+    left: -8;
+    transform: rotate(15deg);
+}
+
+#hero .ttc img {
+    position: absolute;
+    top: -256;
+    left: 52;
+    transform: rotate(318deg);
+}
+
+}
+</style>
+<section id="hero">
+    <h1 class="title">Cadres Binders</h1>
+    <div class="visual-container">
+        <div class="ftc">
+            <h2 class="er">Esthetique et robuste</h2>
+            <img class="union" src="./assets/ftu.svg" alt="">
+        </div>
+
+        <div class="stc">
+            <h2 class="pc">Plusieurs colorie</h2>
+            <img class="union" src="./assets/stu.svg" alt="">
+        </div>
+        <div class="ttc">
+            <h2 class="ce">Couverture etanche</h2>
+            <img class="union" src="./assets/ttu.svg" alt="">
+        </div>
+
+        <img src="./assets/hero.png" alt="">
+    </div>
+</section>
+
+<section id="products-view">
+       <!-- fiter bar -->
+       <div class="filter-bar">
+        <span class="hd">Filtres:</span>
+        <div class="filter-container">
+            <select name="disp" id="disp">
+                <option  selected disabled>Disponibilités</option>
+                <option value="av">Disponible</option>
+                <option value="ru">En rupture</option>
+            </select>
+
+            <select name="sort" id="sort">
+                <option value="1">Trier par</option>
+            </select>
+
+            <select name="couleur" id="couleur">
+                <option value="1">Couleur</option>
+            </select>
+
+            <select name="prix" id="prix">
+                <option value="1">Prix</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="card-container">
+
+        <div class="card">
+            <div class="slide swiper">
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide"><img src="./assets/coio.png" alt="slide 1"></div>
+                    <div class="swiper-slide"><img src="./assets/coio.png" alt="slide 2"> </div>
+                    <div class="swiper-slide"><img src="./assets/coio.png" alt="Slide 3"></div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+            </div>
+            <div class="content">
+                <div class="text-block">
+                    <div>
+                        <div class="title">Zip binders top loader 216</div>
+                        <div class="options">9 Poche</div>    
+                    </div>
+                    <div class="price">à partir de <b>29,90€</b></div>
+                </div>
+                <div class="icon-block">
+                    <img src="./assets/TL.png" alt="">
+                    <img src="./assets/216.png" alt="">
+                    <img src="./assets/9.png" alt="">
+                </div>
+            </div>
+        
+        </div>
+
+        <div class="card">
+            <div class="slide swiper">
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide"><img src="./assets/ctit.png" alt="slide 1"></div>
+                    <div class="swiper-slide"><img src="./assets/ctit.png" alt="slide 2"> </div>
+                    <div class="swiper-slide"><img src="./assets/ctit.png" alt="Slide 3"></div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+            </div>
+            <div class="content">
+                <div class="text-block">
+                    <div>
+                        <div class="title">Portfolio Top Loader 96</div>
+                        <div class="options">Plusieurs couleur disponible</div>    
+                    </div>
+                    <div class="price">à partir de <b>29,90€</b></div>
+                </div>
+                <div class="icon-block">
+                    <img src="./assets/TL.png" alt="">
+                    <img src="./assets/96.png" alt="">
+                    <img src="./assets/4.png" alt="">
+                </div>
+            </div>
+        </div>
+        </div>
+
+</section>
+<style>
+#products-view{
+    width: 100%;
+    min-height: 100%;
+    padding: 0;
+    margin: 48px 0;
+    background-color: #fff;
+    font-family: 'SF Pro Display', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    overflow: clip;
+}
+
+/* filter bar */
+#products-view .filter-bar{
+    width: 100%;
+    height: auto;
+    padding: 12px 0;
+    padding-left: 52px;
+    display: flex;
+    align-items: center;
+}
+#products-view .filter-bar .hd{
+    margin: 0 8px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+#products-view .filter-bar .filter-container select{
+    border: none;
+    outline: 0;
+    padding: 6px;
+    background-color: transparent;
+    font-family: 'SF Pro Display', sans-serif;
+    font-weight: 100;
+    font-size: 14px;
+    color: #737373;
+    margin: 0 6px;
+    cursor: pointer;
+}
+
+/* Card section  */
+#products-view .card-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: start;
+    padding-left: 48px;
+}
+#products-view .card-container .card{
+    width: 44vw;
+    height: 72vh;
+    background-color: #fff;
+    margin: 24px 28px 24px 0;
+    border-radius: 2px;
+    /* box-shadow: 0 3px 6px #00000030; */
+}
+#products-view .card .swiper{
+    background-color: #F5F5F5;
+    width: 100%;
+    height: 75%;
+}
+#products-view .card .swiper .swiper-wrapper{
+    width: 100%;
+    height: 100%;
+}
+#products-view .card .swiper .swiper-wrapper .swiper-slide {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+#products-view .card .swiper .swiper-wrapper .swiper-slide  img{
+max-width: 332px;
+max-height: 320px;
+}
+#products-view .card .content {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+#products-view .card .content .text-block{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    margin: 0 4px;
+    padding-left: 4px;
+}
+#products-view .card .content .text-block .title{
+    font-size: 14pt;
+    font-weight: 700;
+    margin-top: 16px;
+}
+#products-view .card .content .options {
+    font-size: 12pt;
+    font-weight: 200;
+    color: #626262;
+    margin: 6px 0;
+}
+#products-view .card .content .price{
+    margin-bottom: 12px;
+}
+#products-view .card .content .price b{
+    color: #0048D5
+}
+
+
+#products-view .card .content .icon-block {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#products-view .card .content .icon-block img{
+    max-width: 60px;
+    max-height: 82px;
+    cursor: pointer;
+}
+
+/* Swiper custom css */
+#products-view .swiper-pagination > .swiper-pagination-bullet-active {
+    background-color: #8D8D8D;
+}
+#products-view .swiper-button-next::after, .swiper-button-prev::after{
+    color: #222;
+    font-size: 28px;
+}
+
+/* Responsive MQ */
+@media screen and (max-width: 908px) {
+
+   #products-view .filter-bar{
+        align-items: start;
+        justify-content: start;
+        flex-direction: column;
+        padding-left: 0px;
+    }
+
+   #products-view .filter-bar .hd{
+        margin: 6px 8px;
+    }
+
+   #products-view .filter-bar .filter-container select{
+        margin: 0 1px;
+    }
+
+#products-view .card-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0px;
+    }
+
+   #products-view .card-container .card{
+        width: 92vw;
+        height: 68vh;
+        margin: 20px auto;
+        padding: 4px;
+        border-radius: 12px;
+    }
+
+   #products-view .card-container .card:hover{
+        border: 2px solid #0048D5;
+    }
+
+   #products-view .card .swiper .swiper-wrapper .swiper-slide  img{
+        max-width: 48vw;
+        max-height: 48vh;
+        }
+
+
+
+    
+       #products-view .card .content .text-block{
+            justify-content: start;
+        }
+
+    
+       #products-view .card .content .text-block .title{
+            max-width: 100%;
+            font-size: 13pt;
+            font-weight: 600;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    
+       #products-view .card .content .price{
+        margin-top: 28px;
+        }
+    
+       #products-view .card .content .text-block .options, .price{
+            font-size: 14px;
+        }
+
+    
+       #products-view .card .content .icon-block img{
+            max-width: 12vw;
+            max-height: 16vh;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+}
+</style>
+    <!-- Swiper configurations -->
+    <script>
+        new Swiper('.swiper', {
+          // Optional parameters
+          direction: 'horizontal',
+          loop: true,
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },    
+          // If we need pagination
+          pagination: {
+            el: '.swiper-pagination',
+          },
+        });
+        </script>
